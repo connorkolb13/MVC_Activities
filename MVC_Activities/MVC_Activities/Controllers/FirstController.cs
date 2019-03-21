@@ -11,13 +11,19 @@ namespace DatabaseActivities.Controllers
         // GET: First
         public ActionResult Index()
         {
-            return View(viewName: "Index", model: "All starts here.");
+            return View(viewName: "Index", model: "Enter your full name.");
         }
 
         [HttpPost]
-        public ActionResult SayHello(string inputString)
+        public ActionResult getInitials(string name)
         {
-            return View(viewName: "Index", model: "Hello " + inputString);
+            string[] words = name.Split(null);
+            String initials = "";
+            foreach (String word in words) {
+                initials += word[0];
+            }
+            initials.ToUpper();
+            return View(viewName: "Index", model: "Your initials:" + initials);
         }
 
     }
