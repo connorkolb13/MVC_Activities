@@ -11,13 +11,13 @@ namespace MVC_Activities.Controllers
         // GET: First
         public ActionResult Index()
         {
-            return View(viewName: "Index", model: "All starts here.");
+            return View(viewName: "Index", model: "Welcome to my humble MVC Project Webpage.");
         }
 
         [HttpPost]
         public ActionResult SayHello(string inputString)
         {
-            return View(viewName: "Index", model: "Hello " + inputString);
+            return View(viewName: "Index", model: "Hello " + inputString + ", that's a very nice name you've got there.");
         }
 
     }
