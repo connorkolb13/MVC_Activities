@@ -1,0 +1,22 @@
+﻿@model int
+
+@{
+    ViewBag.Title = "Magic Number";
+}
+
+<h2>Activity 3 - Magic Number Calculator</h2>
+
+<div>
+    <form action="getMagicNum" method="post">
+        <p>
+            Enter the lower bound: <input name="lowerBound" type="number"/>
+            <br />
+            Enter the upper bound: <input name="upperBound" type="number"/>
+        </p>
+        <input name="submit" type="submit" />
+    </form>
+    <br />
+    <p>
+        Your Magic Number is: @Model
+    </p>
+</div>

@@ -196,6 +196,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\First\Index.cshtml" />
     <Content Include="Views\First\Square.cshtml" />
+    <Content Include="Views\First\MagicNum.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

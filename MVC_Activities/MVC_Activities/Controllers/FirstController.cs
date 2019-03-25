@@ -39,5 +39,27 @@ namespace MVC_Activities.Controllers
             values[2] = Math.Sqrt(inputNumber);
             return values;
         }
+
+        public ActionResult MagicNum()
+        {
+            return View(viewName: "MagicNum", model: 0);
+        }
+
+        [HttpPost]
+        public ActionResult getMagicNum(int lowerBound, int upperBound)
+        {
+            return View(viewName: "MagicNum", model: magicCalc(lowerBound, upperBound));
+        }
+
+        public int magicCalc(int low, int high)
+        {
+            if(low > high) {
+                return -999;
+            }
+            else {
+                Random random = new Random();
+                return random.Next(low - 1, high + 1);
+            }
+        }
     }
 }
