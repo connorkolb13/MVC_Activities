@@ -20,5 +20,23 @@ namespace MVC_Activities.Controllers
             return View(viewName: "Index", model: "Hello " + inputString + ", that's a very nice name you've got there.");
         }
 
+        public ActionResult Square()
+        {
+            return View(viewName: "Square", model: new double[2]);
+        }
+
+        [HttpPost]
+        public ActionResult SaySquare(double inputNumber)
+        {
+            return View(viewName: "Square", model: getValues(inputNumber));
+        }
+
+        public double[] getValues(double inputNumber)
+        {
+            double[] values = new double[2];
+            values[0] = inputNumber * inputNumber;
+            values[1] = inputNumber * inputNumber * inputNumber;
+            return values;
+        }
     }
 }

@@ -1,0 +1,18 @@
+﻿@model double[]
+
+@{
+    ViewBag.Title = "Square";
+}
+
+<h2>Activity 2 - Square a number.</h2>
+
+<div>
+    <form action="SaySquare" method="post">
+        <p>Enter the number to square: <input name="inputNumber" type="number" step="any" /></p>
+        <input name="submit" type="submit" />
+    </form>
+    <p>
+        The square of the input is : @Model[0]
+        The cube of the input is : @Model[1]
+    </p>
+</div>
