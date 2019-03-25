@@ -22,7 +22,7 @@ namespace MVC_Activities.Controllers
 
         public ActionResult Square()
         {
-            return View(viewName: "Square", model: new double[2]);
+            return View(viewName: "Square", model: new double[3]);
         }
 
         [HttpPost]
@@ -33,9 +33,10 @@ namespace MVC_Activities.Controllers
 
         public double[] getValues(double inputNumber)
         {
-            double[] values = new double[2];
+            double[] values = new double[3];
             values[0] = inputNumber * inputNumber;
             values[1] = inputNumber * inputNumber * inputNumber;
+            values[2] = Math.Sqrt(inputNumber);
             return values;
         }
     }
