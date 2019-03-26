@@ -1,0 +1,19 @@
+﻿@model int
+@{
+    ViewBag.Title = "MagicNumber";
+}
+
+<h2>Activity 3: MagicNumber</h2>
+
+<div>
+    <form action="FindNum" method="post">
+        <p>Enter lower number <input name="inputNumberLow" type="number" /></p>
+        <p>Enter high number <input name="inputNumberHigh" type="number" /></p>
+        <input name="submit" type="submit" />
+    </form>
+    <p>
+       Your Magic Number is : @Model
+    </p>
+</div>
+
+
