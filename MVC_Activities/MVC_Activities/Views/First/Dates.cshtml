@@ -11,6 +11,10 @@
         <input name="submit" type="submit" />
     </form>
     <p>
-        Your birthday is: @Model.Year
+        @{
+            DateTime pres = new DateTime(2020, 11, 3);
+            TimeSpan diff = pres.Subtract(Model);
+        }
+        During the next election you will be: @((diff.Days)/365) years old;
     </p>
 </div>
