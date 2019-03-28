@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>First Page</title>
+</head>
+<body>
+    <div id="app">
+        <input v-model="inputValue" />
+        <p>Here is the value of the field: {{ inputValue }}</p>
+    </div>
+</body>
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            inputValue: ""
+        },
+        methods: {
+
+        }
+    })
+</script>
